@@ -18,11 +18,11 @@ mkdir /Path/To/My/Project
 ```
 Then create a new folder, saving all required python executable file, for this project
 ```
-virtualenv /Path/To/My/Project/Env
+python -m virtualenv /Path/To/My/Project/Env
 ```
 * One can also choose the correct python interpretor
 ```
-virtualenv -p /usr/bin/python2.7 /Path/To/My/Project/Env
+python -m virtualenv -p /usr/bin/python2.7 /Path/To/My/Project/Env
 ```
 One will see a new folder Env in my/project directory
 
@@ -42,8 +42,10 @@ source bin/activate
 One can install python package as usual
 
 ```
-pip install --user biopython
+pip install biopython
 ```
+
+One don't need to use --user flag because installing packages in this env doesn't require administry priviledge
 
 ### deactivate or remove virtual env
 Deactivate
